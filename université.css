@@ -1,0 +1,404 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	width: 1000px;
+	margin-left: 150px;
+	margin-top: 50px;
+
+}
+#image-logo{
+	position: absolute;
+	left: 170px;
+	top: 0px;
+}
+
+
+#navigation{
+	position: relative;
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: 'Sevillana', cursive;
+    font-size: 40px; 
+    font-weight: bolder;
+}
+
+#navigation ul{
+	list-style-type: none;
+
+}
+
+#liste{
+	width: 600px;
+	height: 200px;
+	margin-top: 170px;
+	display: grid;
+	grid-template-columns: repeat(5,auto);
+	font-size: 18px;
+	font-weight: bold;
+	font-family: 'Cairo', sans-serif;	
+}
+
+#liste a {
+	text-decoration-line: none;
+	color: grey;
+	padding: 5px;
+}
+#liste a:hover{
+	color: #042bb6;
+  font-weight: bolder;
+  padding: -5px;
+}
+#liste1,#liste2,#liste3,#liste4{
+	display: block;
+	position: absolute;
+	display: none;
+	z-index: 1;
+	top: 100px;
+	background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+	
+}
+#liste1 a, #liste2 a, #liste3 a, #liste4 a{
+	color: black;
+	font-size: 16px;
+	text-align: right;
+	float: right;
+}
+#liste1 a:hover, #liste2 a:hover, #liste3 a:hover, #liste4 a:hover{
+	background-color: #32dce9;
+	padding: 0px 5px;
+	color: white;
+	position: relative;
+	top: 5px;
+	font-weight: bolder;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+#liste1{
+	right: 550px;
+	height:70px; 
+}
+#liste2{
+	right: 450px;
+
+}
+#liste3{
+	right: 340px;
+}
+#liste4{
+	right: 200px;
+}
+
+.autre:hover #liste1, .sport:hover #liste2, .société:hover #liste3, .histoire:hover #liste4 {
+	display: block;
+	padding: 5px 5px;
+}
+
+
+#ligne{
+	width: 1349px;
+	height: 40px;
+	margin-left: -150px;
+	margin-top: 40px;
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+   
+}
+
+
+/*container*/
+#container {
+
+	width: 1000px;
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	gap:15px;
+	position: relative;
+	left: -70px;
+    top: 100px;
+}
+
+#image-université{
+	margin-top: 80px;
+}
+#paragraphe{
+	border: 1px solid blue;
+	width: 350px;
+	text-align: right;
+	padding: 10px;
+	font-family:  sans-serif;
+	font-size: 18px;
+    background-color: white;
+}
+#univ{
+ width: 770px;
+ height: 470px;	
+
+ 
+}
+#univ1, #univ2, #univ3{
+	width: 770px;
+	position: absolute;
+	height: 470px;
+	top: 80px;
+}
+
+.icon-right {
+	position: absolute;
+	background-color: grey;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	color: white;
+	top: 300px;
+	left: 730px;
+   font-size: 40px;
+   font-weight: bolder;
+   animation-name: right;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	cursor: pointer;
+}
+
+@keyframes right{
+	    0%{left:720px;}
+    100%{right:730px;}
+}
+
+.icon-left{
+   position: absolute;
+   top: 300px;
+   left: 10px;
+   	background-color: grey;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	color: white;
+   font-size: 40px;
+   font-weight: bolder;
+   animation-name: left;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	cursor: pointer;
+}
+@keyframes left{
+	    0%{right: 10px;}
+    100%{left:0px;}
+}
+
+
+
+
+#icon-barre, #text1{
+	display: none;
+}
+
+
+
+/*media querie */ 
+
+@media screen and (max-width: 650px){
+body{
+	
+	box-sizing: border-box;
+	margin-left: 0;
+	margin-right: 10px;
+    width: 100%;
+
+}
+
+  #image-logo{
+	display: none;
+}
+#elaffroun {
+	width: 100%;
+	position: absolute;
+	display: flex;
+    margin-left: 10px;
+	font-family: 'Sevillana', cursive;
+	font-size: 50px;
+	margin-right: 20px;
+}
+
+
+   
+
+   #liste{
+   top: -30px;
+   width: 50%;  	
+   height:0px;
+   	right: 20px;
+   	position: absolute;
+   	display: flex;
+   	flex-direction:column-reverse;
+   	justify-content: space-between;
+   	align-items: flex-end;
+   	z-index: 1;
+   	background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+   }
+   #liste a{
+   	font-size: 20px;
+   	color: black;
+   	z-index: 11000;
+   }
+
+
+   #ligne{
+   	position: relative;
+   	width: 100%;
+   	display: flex;
+   	margin-left: 0;
+   }
+   .sport, .autre, .société, .histoire, .accueil{
+    border-bottom: 5px solid white;
+    padding-bottom: 5px;
+    display: none;
+   }
+
+   .accueil{
+    background-color: #32dce9;
+   }
+   
+
+  #icon-barre{
+  	display: flex;
+  	position: absolute;
+  	width: 100%;
+  	top:10px;
+  	right: 20px;
+  	font-size: 40px;
+  	justify-content: flex-end;
+
+  	
+  	
+  }
+
+  #liste4{
+  	position: absolute;
+  	width: 165px;
+  	text-align: right;
+  	left: -175px;
+  	height: 110px;
+  	top: 50px;
+    
+  }
+  #liste4 a{
+  	position: relative;
+  	top: -30px;
+  	left: 5px;
+  	background-color: #32dce9;
+  	border-bottom: 3px solid white;
+  	width: 170px;
+  	color: blue;
+  }
+
+   #liste3{
+  	position: absolute;
+  	width: 165px;
+  	text-align: right;
+  	left: -175px;
+  	height: 55px;
+  	top: 90px;
+
+  }
+  #liste3 a{
+  	position: relative;
+  	top: -30px;
+  	left: 5px;
+  	background-color: #32dce9;
+  	border-bottom: 3px solid white;
+  	width: 160px;
+  	color: blue;
+  }
+
+     #liste2{
+  	position: absolute;
+  	width: 165px;
+  	text-align: right;
+  	left: -175px;
+  	height: 165px;
+  	top: 140px;
+
+  }
+  #liste2 a{
+  	position: relative;
+  	top: -30px;
+  	left: 5px;
+  	background-color: #32dce9;
+  	border-bottom: 3px solid white;
+  	width: 160px;
+  	height: 40px;
+  	color: blue;
+  }
+
+  #liste1{
+  	position: absolute;
+  	width: 165px;
+  	text-align: right;
+  	left: -175px;
+  	height: 55px;
+  	top: 190px;
+
+  }
+  #liste1 a{
+  	position: relative;
+  	top: -30px;
+  	left: 5px;
+  	background-color: #32dce9;
+  	border-bottom: 3px solid white;
+  	width: 160px;
+  	height: 40px;
+  	color: blue;
+  	
+  }
+
+  /* container */ 
+  #container{
+  	position: relative;
+  	width: 100%;
+	display: flex;
+	background-color: #f4f4f4;
+	margin-left: 0px;
+	
+}
+#text{display: none;}
+
+#text1{
+	direction: rtl;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin-top: 0px;
+	width: 95%;
+	text-align: right;
+	padding: 10px;
+	font-family: 'Cairo', sans-serif;
+	margin-left: 0px;
+	background-color: white;
+	font-size: 20px;
+
+
+}
+
+#images{
+	margin-top: 50px;
+	display: none;
+	margin-left: 150px;
+}
+#images img{
+	width: 500px;
+	height: 500px;
+}
+
+#container{
+	display: none;
+}
+#sources1 a{
+	text-decoration-line: none;
+}
+}
